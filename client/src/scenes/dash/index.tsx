@@ -1,4 +1,7 @@
 import { Box, useMediaQuery, useTheme } from "@mui/material";
+import VirtualData from "./VirtualData";
+import ChartData from "./ChartData";
+import TextData from "./TextData";
 
 type Props = {};
 
@@ -53,8 +56,8 @@ const gridTemplateSmallScreen = `
     "j"
 `;
 
-const Dashboard = (props: Props) => {
-	const { palette } = useTheme();
+const Dashboard = () => {
+
 	const isAboveMediumScreens = useMediaQuery("(min-width:1200px)");
 	return (
 		<Box
@@ -76,16 +79,9 @@ const Dashboard = (props: Props) => {
 					  }
 			}
 		>
-			<Box bgcolor="#fff" gridArea="a"></Box> 
-			<Box bgcolor="#fff" gridArea="b"></Box>
-			<Box bgcolor="#fff" gridArea="c"></Box>
-			<Box bgcolor="#fff" gridArea="d"></Box>
-			<Box bgcolor="#fff" gridArea="e"></Box>
-			<Box bgcolor="#fff" gridArea="f"></Box>
-			<Box bgcolor="#fff" gridArea="g"></Box>
-			<Box bgcolor="#fff" gridArea="h"></Box>
-			<Box bgcolor="#fff" gridArea="i"></Box>
-			<Box bgcolor="#fff" gridArea="j"></Box>
+			<VirtualData/>
+			<ChartData/>
+			<TextData/>
 		</Box>
 	);
 };
