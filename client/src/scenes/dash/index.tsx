@@ -1,4 +1,4 @@
-import { Box, useMediaQuery, useTheme } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import VirtualData from "./VirtualData";
 import ChartData from "./ChartData";
 import TextData from "./TextData";
@@ -56,8 +56,7 @@ const gridTemplateSmallScreen = `
     "j"
 `;
 
-const Dashboard = () => {
-
+const Dashboard = (props: Props) => {
 	const isAboveMediumScreens = useMediaQuery("(min-width:1200px)");
 	return (
 		<Box
@@ -79,9 +78,9 @@ const Dashboard = () => {
 					  }
 			}
 		>
-			<VirtualData/>
-			<ChartData/>
-			<TextData/>
+			<VirtualData />
+			<ChartData />
+			<TextData />
 		</Box>
 	);
 };

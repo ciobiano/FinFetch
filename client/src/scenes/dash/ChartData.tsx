@@ -5,6 +5,7 @@ type Props = {}
 
 const ChartData = (props: Props) => {
     const {data}= useGetKpisQuery();
+	console.log("data:",data);
   return (
 		<>
 			<DashboardBox gridArea="d"></DashboardBox>
