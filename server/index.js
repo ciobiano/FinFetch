@@ -5,7 +5,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
-import KpiRoute from "./routes/kpi.js";
+import kpiRoute from "./routes/kpi.js";
 import KPI from "./models/KPI.js";
 import { kpis } from "./data/data.js";
 /* CONFIGURATIONS*/
@@ -19,13 +19,14 @@ app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+//Allow requests from frontend
 app.use(cors());
 
 console.log("hello");
 
 /* ROUTES */
 
-app.use("/kpi", KpiRoute);
+app.use("/kpi", kpiRoute);
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 9090;
@@ -37,9 +38,6 @@ mongoose
 	})
 	.then(async () => {
 		app.listen(PORT, () => console.log(`server port: ${PORT}`));
-
-
-
 
 		// ADD DATE ONLY ONCE TIME OR WHEN YOU WANT TO RESET THE DATABASE
 		// await mongoose.connection.db.dropDatabase();
