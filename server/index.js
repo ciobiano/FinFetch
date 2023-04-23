@@ -6,8 +6,10 @@ import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
 import kpiRoute from "./routes/kpi.js";
+import productRoutes from "./routes/product.js";
+import Product from "./models/Product.js";
 import KPI from "./models/KPI.js";
-import { kpis } from "./data/data.js";
+import { kpis,products } from "./data/data.js";
 /* CONFIGURATIONS*/
 
 dotenv.config();
@@ -27,6 +29,7 @@ console.log("hello");
 /* ROUTES */
 
 app.use("/kpi", kpiRoute);
+app.use ("/product", productRoutes);
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 9090;
@@ -42,5 +45,6 @@ mongoose
 		// ADD DATE ONLY ONCE TIME OR WHEN YOU WANT TO RESET THE DATABASE
 		// await mongoose.connection.db.dropDatabase();
 		// KPI.insertMany(kpis);
+		// Product.insertMany(products);
 	})
 	.catch((error) => console.log(`${error} did not connect to server`));

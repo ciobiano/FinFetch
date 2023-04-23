@@ -1,63 +1,161 @@
 export const tokens = {
 	grey: {
-		100: "#f0f0f3",
-		200: "#e1e2e7",
-		300: "#d1d3da",
-		400: "#c2c5ce",
-		500: "#b3b6c2",
-		600: "#8f929b",
-		700: "#6b6d74",
-		800: "#48494e",
-		900: "#242427",
+		50: "#f5f5f5",
+		100: "#e5e5e5",
+		200: "#FBF9FC",
+		300: "#c2c2c2",
+		400: "#ababab",
+		500: "#8c8c8c",
+		600: "#707070",
+		700: "#525252",
+		800: "#393939",
+		900: "#000000",
 	},
+
+	black: {
+		100: "#cccccc",
+		200: "#999999",
+		300: "#666766",
+		400: "#333433",
+		500: "#000100",
+		600: "#000100",
+		700: "#000100",
+		800: "#000000",
+		900: "#000000",
+	},
+
 	primary: {
-		// light green
-		100: "#d0fcf4",
-		200: "#a0f9e9",
-		300: "#71f5de",
-		400: "#41f2d3",
-		500: "#12efc8",
-		600: "#0ebfa0",
-		700: "#0b8f78",
-		800: "#076050",
-		900: "#043028",
+		100: "#e8e6ff",
+		200: "#d1cdfe",
+		300: "#bbb5fe",
+		400: "#a49cfd",
+		500: "#8d83fd",
+		600: "#7169ca",
+		700: "#554f98",
+		800: "#383465",
+		900: "#1c1a33",
 	},
 	secondary: {
-		// yellow
-		100: "#fcf0dd",
-		200: "#fae1bb",
-		300: "#f7d299",
-		400: "#f5c377",
-		500: "#f2b455",
-		600: "#c29044",
-		700: "#916c33",
-		800: "#614822",
-		900: "#302411",
+		100: "#fff4de",
+		200: "#ffe9bd",
+		300: "#ffde9c",
+		400: "#ffd37b",
+		500: "#ffc85a",
+		600: "#cca048",
+		700: "#997836",
+		800: "#665024",
+		900: "#332812",
 	},
+
 	tertiary: {
-		// purple
-		500: "#8884d8",
-	},
+		
+      100: "#d0f9e7",
+      200: "#a2f3cf",
+      300: "#73edb8",
+      400: "#45e7a0",
+      500: "#16e188",
+      600: "#12b46d",
+      700: "#0d8752",
+      800: "#095a36",
+      900: "#042d1b"
+},
+
+
 	background: {
-		light: "#2d2d34",
+		light: "#EEEDEF",
 		main: "#1f2026",
 	},
 };
 
 // mui theme settings
-export const themeSettings = {
+// light mode theme
+export const lightTheme = {
+	palette: {
+		primary: {
+			...tokens.primary,
+			main: tokens.primary[500],
+			light: tokens.primary[600],
+			
+		},
+		neutral: {
+      ...tokens.black,
+      main: tokens.black[900],
+
+    },
+		secondary: {
+			...tokens.secondary,
+			main: tokens.secondary[600],
+		},
+		tertiary: {
+			...tokens.tertiary,
+			main: tokens.tertiary[600],
+		},
+		grey: {
+			...tokens.grey,
+			main: tokens.grey[200],
+		},
+		background: {
+			...tokens.grey,
+			main: tokens.grey[200],
+		},
+	},
+	typography: {
+		fontFamily: ["Inter", "sans-serif"].join(","),
+		fontSize: 12,
+		h1: {
+			fontFamily: ["Inter", "sans-serif"].join(","),
+			fontSize: 32,
+		},
+		h2: {
+			fontFamily: ["Inter", "sans-serif"].join(","),
+			fontSize: 24,
+		},
+		h3: {
+			fontFamily: ["Inter", "sans-serif"].join(","),
+			fontSize: 20,
+			fontWeight: 800,
+			color: tokens.grey[200],
+		},
+		h4: {
+			fontFamily: ["Inter", "sans-serif"].join(","),
+			fontSize: 14,
+			fontWeight: 600,
+			color: tokens.grey[300],
+		},
+		h5: {
+			fontFamily: ["Inter", "sans-serif"].join(","),
+			fontSize: 12,
+			fontWeight: 400,
+			color: tokens.grey[500],
+		},
+		h6: {
+			fontFamily: ["Inter", "sans-serif"].join(","),
+			fontSize: 10,
+			color: tokens.grey[700],
+		},
+	},
+};
+
+// dark mode theme
+export const darkTheme = {
 	palette: {
 		primary: {
 			...tokens.primary,
 			main: tokens.primary[500],
 			light: tokens.primary[400],
+			neutral: tokens.grey[100],
+		},
+		neutral: {
+			...tokens.grey,
+			main: tokens.grey[400],
 		},
 		secondary: {
 			...tokens.secondary,
-			main: tokens.secondary[500],
+			main: tokens.secondary[300],
 		},
 		tertiary: {
 			...tokens.tertiary,
+			main: tokens.tertiary[500],
 		},
 		grey: {
 			...tokens.grey,
@@ -65,43 +163,48 @@ export const themeSettings = {
 		},
 		background: {
 			default: tokens.background.main,
-			light: tokens.background.light,
+			paper: tokens.grey[800],
 		},
 	},
 	typography: {
-		fontFamily: ["Roboto Serif", "sans-serif"].join(","),
+		fontFamily: ["Inter", "sans-serif"].join(","),
 		fontSize: 12,
 		h1: {
-			fontFamily: ["Roboto Serif", "sans-serif"].join(","),
+			fontFamily: ["Inter", "sans-serif"].join(","),
 			fontSize: 32,
 		},
 		h2: {
-			fontFamily: ["Roboto Serif", "sans-serif"].join(","),
+			fontFamily: ["Inter", "sans-serif"].join(","),
 			fontSize: 24,
 		},
 		h3: {
-			fontFamily: ["Roboto Serif", "sans-serif"].join(","),
+			fontFamily: ["Inter", "sans-serif"].join(","),
 			fontSize: 20,
 			fontWeight: 800,
 			color: tokens.grey[200],
 		},
 		h4: {
-			fontFamily: ["Roboto Serif", "sans-serif"].join(","),
+			fontFamily: ["Inter", "sans-serif"].join(","),
 			fontSize: 14,
 			fontWeight: 600,
 			color: tokens.grey[300],
 		},
 		h5: {
-			fontFamily: ["Roboto Serif", "sans-serif"].join(","),
+			fontFamily: ["Inter", "sans-serif"].join(","),
 			fontSize: 12,
 			fontWeight: 400,
 			color: tokens.grey[500],
 		},
 		h6: {
-			fontFamily: ["Roboto Serif", "sans-serif"].join(","),
+			fontFamily: ["Inter", "sans-serif"].join(","),
 			fontSize: 10,
-			color: tokens.grey[700],
+			color: tokens.grey[200],
 		},
 	},
 };
 
+//
+export const themeSettings = (mode: any) => ({
+	...lightTheme,
+
+});

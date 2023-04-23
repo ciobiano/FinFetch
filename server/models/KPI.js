@@ -60,29 +60,29 @@ const KPISchema = new Schema(
 {
     totalProfit: {
         type: mongoose.Types.Currency,
-        Currency: 'NGN',
+        Currency: 'USD',
         get:(v) => v/100
     },
     totalRevenue: {
         type: mongoose.Types.Currency,
-        Currency: 'NGN',
+        Currency: 'USD',
         get:(v) => v/100
     },
     totalExpenses: {
         type: mongoose.Types.Currency,
-        Currency: 'NGN',
+        Currency: 'USD',
         get:(v) => v/100
     },
     expensesByCategory: {
         type:Map,
         of:{
             type: mongoose.Types.Currency,
-            Currency: 'NGN',
+            Currency: 'USD',
             get:(v) => v/100
 
         }
     },
-    months: [monthSchema],
+    monthlyData: [monthSchema],
     dailyData: [daySchema]
 
     
