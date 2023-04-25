@@ -98,14 +98,14 @@ const Row3 = () => {
 					height="75%"
 					sx={{
 						"& .MuiDataGrid-root": {
-							color: theme.palette.grey[900],
+							color: theme.palette.neutral.main,
 							border: "none",
 						},
 						"& .MuiDataGrid-cell": {
-							borderBottom: `1px solid ${theme.palette.grey[800]} !important`,
+							borderBottom: `1px solid ${theme.palette.neutral.main} !important`,
 						},
 						"& .MuiDataGrid-columnHeaders": {
-							borderBottom: `1px solid ${theme.palette.grey[900]} !important`,
+							borderBottom: `1px solid ${theme.palette.neutral.main} !important`,
 						},
 						"& .MuiDataGrid-columnSeparator": {
 							visibility: "hidden",
@@ -132,14 +132,14 @@ const Row3 = () => {
 					height="80%"
 					sx={{
 						"& .MuiDataGrid-root": {
-							color: theme.palette.grey[900],
+							color: theme.palette.neutral.main,
 							border: "none",
 						},
 						"& .MuiDataGrid-cell": {
-							borderBottom: `1px solid ${theme.palette.grey[800]} !important`,
+							borderBottom: `1px solid ${theme.palette.neutral.main} !important`,
 						},
 						"& .MuiDataGrid-columnHeaders": {
-							borderBottom: `1px solid ${theme.palette.grey[800]} !important`,
+							borderBottom: `1px solid ${theme.palette.neutral.main} !important`,
 						},
 						"& .MuiDataGrid-columnSeparator": {
 							visibility: "hidden",
