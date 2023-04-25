@@ -13,12 +13,12 @@ const daySchema = new Schema({
 	month: String,
 	revenue: {
 		type: mongoose.Types.Currency,
-		Currency: "NGN",
+		Currency: "USD",
 		get: (v) => v / 100,
 	},
 	expenses: {
 		type: mongoose.Types.Currency,
-		Currency: "NGN",
+		Currency: "USD",
 		get: (v) => v / 100,
 	},
 }
@@ -31,22 +31,22 @@ const monthSchema = new Schema(
     month: String ,
     revenue: {
         type: mongoose.Types.Currency,
-        Currency: 'NGN',
+        Currency: 'USD',
         get:(v) => v/100
     },
     expenses:{
         type: mongoose.Types.Currency,
-        Currency: 'NGN',
+        Currency: 'USD',
         get:(v) => v/100
     },
     operationalExpenses:{
         type: mongoose.Types.Currency,
-        Currency: 'NGN',
+        Currency: 'USD',
         get:(v) => v/100
     },
     nonOperationalExpenses:{
         type: mongoose.Types.Currency,
-        Currency: 'NGN',
+        Currency: 'USD',
         get:(v) => v/100
     },
 
